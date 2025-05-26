@@ -209,9 +209,15 @@ const questionElement = document.getElementById('question');
 const answersContainer = document.getElementById('answers');
 const submitBtn = document.getElementById('submit-btn');
 const nextBtn = document.getElementById('next-btn');
+const progressElement = document.getElementById('progress');
+const restartBtn = document.getElementById('restart-btn');
 
 function shuffle(array) {
   return array.sort(() => Math.random() - 0.5);
+}
+
+function updateProgress() {
+  progressElement.textContent = `Frage ${currentQuestionIndex + 1} von ${questions.length}`;
 }
 
 function loadQuestion() {
@@ -233,6 +239,8 @@ function loadQuestion() {
     label.append(" " + answer.text);
     answersContainer.appendChild(label);
   });
+
+  updateProgress();
 }
 
 function clearState() {
@@ -280,14 +288,25 @@ nextBtn.addEventListener('click', () => {
   }
 });
 
+restartBtn.addEventListener('click', () => {
+  currentQuestionIndex = 0;
+  score = 0;
+  shuffle(questions);
+  restartBtn.style.display = 'none';
+  submitBtn.style.display = 'inline-block';
+  loadQuestion();
+});
+
 function showResults() {
   questionElement.innerText = "Quiz beendet!";
+  progressElement.textContent = "";
   answersContainer.innerHTML = `
     <p>Du hast <strong>${score}</strong> von <strong>${questions.length}</strong> Fragen richtig beantwortet.</p>
     <p>Ergebnis: <strong>${Math.round((score / questions.length) * 100)}%</strong></p>
   `;
   submitBtn.style.display = 'none';
   nextBtn.style.display = 'none';
+  restartBtn.style.display = 'inline-block';
 }
 
 shuffle(questions);
