@@ -1,0 +1,22 @@
+body {
+  font-family: sans-serif;
+  padding: 20px;
+  background: #f0f0f0;
+}
+#quiz-container {
+  max-width: 600px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+.correct {
+  background-color: #c8f7c5;
+}
+.incorrect {
+  background-color: #f8d7da;
+}
+.answer {
+  display: block;
+  margin: 10px 0;
+}
