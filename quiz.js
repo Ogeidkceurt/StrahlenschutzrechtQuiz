@@ -83,10 +83,10 @@ const questions = [
   {
     question: "Welche Dosisgrenzwerte gelten für beruflich exponierte Personen?",
     answers: [
-      { text: "20 mSv/Jahr effektive Dosis (gemittelt über 5 Jahre, max. 50 mSv in einem Jahr).", correct: true },
-      { text: "50 mSv/Jahr für die Haut (Hautdosis).", correct: true },
-      { text: "1 mSv/Jahr für die Augenlinse.", correct: false },
-      { text: "6 mSv/Jahr für die Hände (Extremitätendosis).", correct: true },
+      { text: "20 mSv/Kalendarjahr effektive Dosis.", correct: true },
+      { text: "50 mSv/Kalendarjahr für die Hautdosis.", correct: false },
+      { text: "1 mSv/Kalendarjahr für die Augenlinse.", correct: false },
+      { text: "6 mSv/Kalendarjahr für die Hände (Extremitätendosis).", correct: false },
     ]
   },
   {
