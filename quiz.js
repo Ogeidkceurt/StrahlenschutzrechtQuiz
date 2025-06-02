@@ -154,11 +154,12 @@ const questions = [
     ]
   },
   {
-    question: "Wann muss eine beruflich exponierte Person der Kategorie B strahlenschutzärtzlich untersucht werden?",
+    question: "Wann müssen gemäß StrlSchV beruflich exponierte Personen der Kategorie B dem ermächtigten Arzt vorgestellt werden?",
     answers: [
-      { text: "vor Beginn einer Tätigkeit", correct: false },
-      { text: "jährlich", correct: false },
-      { text: "wenn die Behörde dies fordert", correct: true },
+      { text: "alle drei Jahre", correct: false },
+      { text: "jedes Jahr", correct: false },
+      { text: "auf Anordnung der Behörde", correct: true },
+      { text: "auf Anordnung des Strahlenschutzverantwortlichen", correct: false },
     ]
   },
   {
@@ -196,10 +197,70 @@ const questions = [
       { text: "Besteht die Fachkunde aus mehreren Theoriemodulen, so dürfen diese in beliebiger Reihenfolge absolviert werden.", correct: false },
       { text: "Die Beantragung der Fachkunde ist innerhalb von zehn Jahren nach erfolgreichem Kursabschluss möglich.", correct: false },
     ]
-  }
-  
-  
-  // weitere Fragen...
+  },
+  {
+    question: "Wer erteilt die Genehmigung für Tätigkeiten nach §25 StrlSchG?",
+    answers: [
+      { text: "Das BfS", correct: false },
+      { text: "Die technischen Überwachungsvereine", correct: false },
+      { text: "Die nach Landesrecht zuständige Behörde ", correct: true },
+    ]
+  },
+  {
+    question: "Welche Regelung gilt für den SSV für § 25 Personal? ",
+    answers: [
+      { text: "StrlSchG", correct: true },
+      { text: "ArbSchG", correct: false },
+      { text: "Arbeitsstättenverordnung", correct: false },
+      { text: "Gefahrgutverordnung", correct: false },
+    ]
+  },
+  {
+    question: "In welcher Anlage des jeweiligen Gesetzes sind die Freigrenzen und Freigabewerte der Radionuklide aufgeführt?",
+    answers: [
+      { text: "Anlage 7 StrlSchG", correct: false },
+      { text: "Anlage 12 AtG", correct: false },
+      { text: "Anlage 4 StrlSchV", correct: true },
+    ]
+  },
+  {
+    question: "Wie groß ist der Referenzwert für die über das Jahr gemittelte Radon-222-Aktivitätskonzentration (in der Luft in Aufenthaltsräumen) gemäß §124 StrlSchG?",
+    answers: [
+      { text: "300 Becquerel je Kubikmeter", correct: true },
+      { text: "100 Becquerel je Kubikmeter", correct: false },
+      { text: "220 Becquerel je Kubikmeter", correct: false },
+    ]
+  },
+  {
+    question: "Welche Maßnahmen dienen zur Sicherung eines technisch guten Zustandes einer Röntgeneinrichtung",
+    answers: [
+      { text: "Abnahmeprüfung nach § 115 StrlSchV", correct: true },
+      { text: "Konstanzprüfung nach § 116 StrlSchV", correct: true },
+      { text: "personendosimetrische Überwachung", correct: false },
+      { text: "wiederkehrende Sachverständigenprüfung nach § 88 StrlSchV", correct: true },
+    ]
+  },
+  {
+    question: "Wer bestellt den Strahlenschutz-Beauftragten?",
+    answers: [
+      { text: "die zuständige Genehmigungs- und Aufsichtsbehörde", correct: false },
+      { text: "das Umweltministerium", correct: false },
+      { text: "der Strahlenschutzverantwortliche", correct: true },
+      { text: "der zuvor in dem Entscheidungsbereich tätige Strahlenschutzbeauftragte", correct: false },
+    ]
+  },
+  {
+    question: "Welche Kriterien gelten für schwangere und stillende Frauen?",
+    answers: [
+      { text: "Schwangere Frauen (ausgenommen als Patientin) dürfen sich nicht im Kontrollbereich aufhalten", correct: false },
+      { text: "Schwangere und stillende Frauen dürfen nur unter Arbeitsbedingungen tätig werden, bei denen eine innere Exposition ausgeschlossen ist", correct: true },
+      { text: "Stillende Frauen dürfen sich nicht in betrieblichen Überwachungsbereichen aufhalten, in denen mit offenen radioaktiven Stoffen umgegangen wird", correct: false },
+      { text: "Aufenthalt und Tätigkeit im Kontrollbereich sind nur während der ersten beiden Monate der Schwangerschaft untersagt", correct: false },
+    ]
+  } 
+ 
+ // weitere Fragen...
+ 
 ];
 
 let currentQuestionIndex = 0;
