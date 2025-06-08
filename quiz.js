@@ -257,6 +257,14 @@ const questions = [
       { text: "Stillende Frauen dürfen sich nicht in betrieblichen Überwachungsbereichen aufhalten, in denen mit offenen radioaktiven Stoffen umgegangen wird", correct: false },
       { text: "Aufenthalt und Tätigkeit im Kontrollbereich sind nur während der ersten beiden Monate der Schwangerschaft untersagt", correct: false },
     ]
+  },
+  {
+    question: "Welches der Folgenden gilt laut AtG als Kernbrennstoff? ",
+    answers: [
+      { text: "10 kg Abfall mit 14 g U-235", correct: false },
+      { text: "10 kg Abfall mit 15 g Pu-242", correct: false },
+      { text: "100 kg Abfall mit 15g Pu-239", correct: true},
+    ]
   } 
  
  // weitere Fragen...
